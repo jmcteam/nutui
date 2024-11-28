@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		// 默认false,是否检测定义了但是没使用的变量
+		"noUnusedLocals": true,
+		// 用于检查是否有在函数体中没有使用的参数
+		"noUnusedParameters": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": false,
+		"noImplicitReturns": false,
+		"noImplicitAny": false,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"baseUrl": "./",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"target": "ESNext",
+		"lib": ["ESNext", "dom"],
+		"noEmit": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"jsx": "preserve",
+		"jsxImportSource": "vue",
+		"skipLibCheck": false,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": [
+		"./types/global.d.ts",
+		"./types/vue.d.ts",
+		"./src/**/*.vue",
+		"./src/**/*.tsx",
+		"./src/**/*.ts",
+		"./packages/**/*.ts",
+		"./packages/**/*.tsx"
+	],
+	"exclude": ["node_modules"],
+	"compileOnSave": false
+}

@@ -1,0 +1,143 @@
+{
+  "name": "@jmc/nutui",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "description": "git",
+  "keywords": [
+    "vue",
+    "nut",
+    "taro",
+    "vue3"
+  ],
+  "scripts": {
+    "eslint": "npx eslint -c eslint.config.js '**/*.{js,jsx,ts,tsx}' && npx tsc -p tsconfig.json --skipLibCheck",
+    "stylelint": "npx stylelint --aei --config stylelint.config.js '**/*.{css,less}'",
+    "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx,md,html,css,less}'",
+    "prepare": "husky install",
+    "start": "npx antm-doc-start",
+    "ghpage": "rm -rf doc_build & npx antm-doc-build && npx gh-pages -d doc_build",
+    "build": "antm-vantui-cli build",
+    "watch": "npx antm-vantui-cli watch",
+    "build:weapp": "taro build --type weapp",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "build:quickapp": "taro build --type quickapp",
+    "watch:weapp": "npm run build:weapp -- --watch",
+    "watch:alipay": "npm run build:alipay -- --watch",
+    "watch:tt": "npm run build:tt -- --watch",
+    "watch:h5": "npm run build:h5 -- --watch",
+    "watch:quickapp": "npm run build:quickapp -- --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@antmjs/vantui-cli": "3.5.3-beta.2",
+    "@babel/runtime": "^7.7.7",
+    "@nutui/icons-vue-taro": "^0.0.8",
+    "@nutui/nutui-taro": "^4.3.13",
+    "@tarojs/components": "3.5.8",
+    "@tarojs/components-advanced": "3.6.35",
+    "@tarojs/helper": "3.5.8",
+    "@tarojs/plugin-framework-react": "3.5.8",
+    "@tarojs/plugin-framework-vue3": "3.5.8",
+    "@tarojs/plugin-html": "3.5.8",
+    "@tarojs/plugin-platform-alipay": "3.5.8",
+    "@tarojs/plugin-platform-jd": "3.5.8",
+    "@tarojs/plugin-platform-qq": "3.5.8",
+    "@tarojs/plugin-platform-swan": "3.5.8",
+    "@tarojs/plugin-platform-tt": "3.5.8",
+    "@tarojs/plugin-platform-weapp": "3.5.8",
+    "@tarojs/router": "3.5.8",
+    "@tarojs/runtime": "3.5.8",
+    "@tarojs/shared": "3.5.8",
+    "@tarojs/taro": "3.5.8",
+    "@tarojs/taro-h5": "3.5.8",
+    "@vue/babel-plugin-jsx": "^1.2.5",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@antmjs/doc": "^2.4.0",
+    "@antmjs/types": "^2.4.0",
+    "@babel/core": "^7.8.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@tarojs/cli": "3.5.8",
+    "@tarojs/webpack5-runner": "3.5.8",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-preset-taro": "3.5.8",
+    "css-loader": "3.4.2",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.12.0",
+    "eslint-config-taro": "3.5.8",
+    "eslint-plugin-vue": "^8.0.0",
+    "style-loader": "1.3.0",
+    "stylelint": "9.3.0",
+    "typescript": "^3.7.0",
+    "husky": "^7.0.1",
+    "unplugin-vue-components": "^0.22.12",
+    "vue-loader": "^17.0.0",
+    "webpack": "5.69.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "style",
+          "chore",
+          "typings",
+          "docs",
+          "refactor",
+          "test"
+        ]
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "description": "新功能（feature）"
+        },
+        "fix": {
+          "description": "修补bug"
+        },
+        "style": {
+          "description": "格式（不影响代码运行的变动）"
+        },
+        "chore": {
+          "description": "构建过程或辅助工具的变动"
+        },
+        "typings": {
+          "description": "Typescript 类型错误"
+        },
+        "docs": {
+          "description": "文档（documentation）"
+        },
+        "refactor": {
+          "description": "重构（既不是新增功能，也不是修改bug的代码变动）"
+        },
+        "test": {
+          "description": "增加或修改测试用例"
+        }
+      }
+    }
+  }
+}

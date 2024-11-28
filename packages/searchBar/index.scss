@@ -1,0 +1,71 @@
+.components-search-bar {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 16px 30px;
+	background-color: #ffffff;
+
+	.search-controls {
+		display: flex;
+		align-items: center;
+		flex: 1 0 0;
+		width: 0;
+		height: 36px;
+		padding: 0 20px;
+		border-radius: 18px;
+		background-color: #f7f8fb;
+
+		.search-placeholder {
+			width: 100%;
+			text-align: center;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			color: rgba(0, 0, 0, 0.25);
+
+			.search-prefix-icon {
+				font-size: 16px;
+				color: initial;
+				margin-right: 8px;
+			}
+
+			.search-placeholder-text {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+
+		.search-wrapper {
+			display: flex;
+			align-items: center;
+			width: 100%;
+
+			.search-input {
+				flex: 1 0 0;
+				width: 0;
+				height: 22px;
+				font-size: 14px;
+				color: rgba(0, 0, 0, 0.85);
+			}
+
+			.search-btn {
+				font-size: 16px;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	.search-action {
+		margin-left: 8px;
+
+		.search-cancel-btn {
+			font-size: 14px;
+			line-height: 22px;
+			color: rgba(0, 0, 0, 0.45);
+		}
+
+		.filter-btn {
+			font-size: 28px;
+		}
+	}
+}

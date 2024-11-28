@@ -1,0 +1,22 @@
+.components-card-group {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px 0 rgba(89, 131, 192, 0.08);
+	overflow: hidden;
+
+	.card-group-item + .card-group-item {
+		&::before {
+			display: block;
+			content: '';
+			height: 1px;
+			margin-inline: 20px;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	.components-card {
+		box-shadow: none;
+		border-radius: 0;
+	}
+}

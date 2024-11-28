@@ -1,0 +1,30 @@
+.components-cascader-box {
+  display: flex;
+  align-items: center;
+
+  .components-cascader-box-arrow {
+    margin-left: 3px;
+    position: relative;
+    top: 3%;
+  }
+
+  .clear-box {
+    margin-left: 3px;
+  }
+
+  .cascader-box-content {
+    color: var(--public-text-color);
+  }
+
+  .cascader-box-content-placeholder {
+    color: var(--public-placeholder-color);
+  }
+
+  .cascader-box-overlay {
+    width: auto;
+  }
+}
+
+.nut-cascader__popup .nut-tabs__titles-item {
+  width: fit-content !important;
+}

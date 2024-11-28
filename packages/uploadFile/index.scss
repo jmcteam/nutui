@@ -1,0 +1,76 @@
+.components-uploaderFile-box {
+	display: flex;
+	flex-direction: column;
+
+	.upload-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.uploader-add {
+		position: relative;
+	}
+
+	.progress-box {
+		position: absolute;
+		padding: 4px;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.progress-text {
+			font-weight: 400;
+			font-size: 12px;
+			color: #ffffff;
+			line-height: 16px;
+		}
+	}
+
+	.upload-show {
+		position: relative;
+
+		.jmc-clear {
+			position: absolute;
+			right: -4px;
+			top: -4px;
+			z-index: 10;
+		}
+	}
+
+	.upload-tips {
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0.45);
+	}
+
+	.upload-box {
+		margin: 4px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		width: 66px;
+		height: 66px;
+		background-color: #f5f5f5;
+
+		.file-box {
+			width: 100%;
+			height: 100%;
+		}
+
+		image {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		.jmc-upicon {
+			font-size: 40px;
+		}
+	}
+}

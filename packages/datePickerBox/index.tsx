@@ -9,7 +9,7 @@ export const DatePickerBox = defineComponent({
   name: 'datePickerBox',
   props: Props,
   setup(props, { emit }) {
-    const show = ref(false)
+    const show = ref<boolean>(false)
     const innerValue = ref<Date | null>(null)
     const pickerValue = ref<Date | null>(null)
 

@@ -1,0 +1,29 @@
+{
+  "console log": {
+    "prefix": "apage",
+    "body": ["console.log('$1');"],
+    "description": "Log output to console"
+  },
+  "a page": {
+    "prefix": "apage",
+    "body": [
+      "import { Container } from '@/components/index'",
+      "import { View } from '@tarojs/components'",
+      "import { defineComponent } from 'vue'",
+      "",
+      "export default defineComponent({",
+      " name: 'xxx',",
+      "  setup() {",
+      "    return () => {",
+      "      return (",
+      "        <Container class='pages-home-index'>",
+      "          <View>home</View>",
+      "        </Container>",
+      "      )",
+      "    }",
+      "  },",
+      "})"
+    ],
+    "description": "For loop"
+  }
+}

@@ -17,3 +17,6 @@ example/dist
 example/weapp
 example/alipay
 node_modules
+
+vant.config.js
+

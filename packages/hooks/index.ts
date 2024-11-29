@@ -8,7 +8,7 @@ import { watch } from 'vue'
  * @param delay 防抖延迟时间（毫秒）
  */
 export function useDebounceWatch(watchValue, fn, delay = 100) {
-  let timeoutId = null
+  let timeoutId: any = null
 
   useDidHide(() => {
     if (timeoutId) clearTimeout(timeoutId)
@@ -29,7 +29,7 @@ export function useDebounceWatch(watchValue, fn, delay = 100) {
  * @param delay 防抖延迟时间（毫秒）
  */
 export function useThrottleWatch(watchValue, fn, delay = 100) {
-  let timeoutId = null
+  let timeoutId: any = null
 
   useDidHide(() => {
     if (timeoutId) clearTimeout(timeoutId)

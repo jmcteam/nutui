@@ -1,5 +1,6 @@
 import { View } from '@tarojs/components'
 import { defineComponent } from 'vue'
+import './index.scss'
 
 export default defineComponent({
   name: 'block',

@@ -5,7 +5,7 @@ import { Props } from './types'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
 
-const CalendarBox = defineComponent({
+export const CalendarBox = defineComponent({
   name: 'calendarBox',
   props: Props,
   setup(props, { emit }) {
@@ -65,9 +65,6 @@ const CalendarBox = defineComponent({
         minDate = '2024-01-01',
         maxDate,
         type,
-        formatContent,
-        minuteStep,
-        formatter,
       } = props
 
       return (
@@ -103,9 +100,6 @@ const CalendarBox = defineComponent({
           )}
 
           <Calendar
-            formatContent={formatContent}
-            minuteStep={minuteStep}
-            formatter={formatter}
             v-model:visible={show.value}
             type={type}
             startDate={minDate}

@@ -1,0 +1,51 @@
+{
+  "id": "4764999",
+  "name": "jmc-nutui",
+  "font_family": "jmc-nut-icon",
+  "css_prefix_text": "jmc-nut-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "42370375",
+      "name": "筛选",
+      "font_class": "filter",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "42370046",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "42250749",
+      "name": "顺序",
+      "font_class": "arrow-sort",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "1638281",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1638283",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "10304466",
+      "name": "clear",
+      "font_class": "clear",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    }
+  ]
+}

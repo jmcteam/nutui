@@ -79,6 +79,10 @@ const config = {
     },
   },
   h5: {
+    devServer: {
+      host: '127.0.0.1',
+      port: '8181',
+    },
     webpackChain(chain) {
       chain.plugin('unplugin-vue-components').use(
         Components({

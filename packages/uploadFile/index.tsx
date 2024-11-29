@@ -196,7 +196,7 @@ export const UploadFile = defineComponent({
         header: {
           //  @ts-ignore
           'Content-Type': 'multipart/form-data',
-          ...props.createHeader(),
+          ...props.createHeader?.(),
           ...headers,
         },
         formData: { ...formData },
@@ -364,7 +364,7 @@ export const UploadFile = defineComponent({
           })
 
         if (params && params.length) {
-          const { result } = await props.queryAttachUrls(params)
+          const { result } = await props.queryAttachUrls?.(params)
 
           realUrlArr = [
             ...realUrlArr,
@@ -413,12 +413,12 @@ export const UploadFile = defineComponent({
                     />
                   </View>
                 )}
-                {slots?.default?.() || (
+                {slots?.['default']?.() || (
                   <View class="upload-box">
                     <View class="plus-sign">
                       <View class="jmc-icon jmc-icon-plus"></View>
                     </View>
-                    <View class="upload-tip">{slots?.desc?.()}</View>
+                    <View class="upload-tip">{slots?.['desc']?.()}</View>
                   </View>
                 )}
               </View>

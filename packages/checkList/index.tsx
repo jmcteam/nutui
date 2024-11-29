@@ -43,7 +43,7 @@ export const CheckList = defineComponent({
     }
 
     watch(
-      () => props.modelValue,
+      () => [props.modelValue, props.data],
       () => {
         if (props.modelValue && Array.isArray(props.modelValue)) {
           const ddd = props.data?.length ? props.data : innerAllData.value
@@ -52,9 +52,6 @@ export const CheckList = defineComponent({
           )
           checkedData.value = checkedData_
         }
-      },
-      {
-        immediate: true,
       },
     )
 
@@ -231,6 +228,7 @@ export const CheckList = defineComponent({
         checkType,
         disabled,
         virtualList,
+        flexStart,
       } = props
 
       const renderShowInner = () => {
@@ -250,6 +248,7 @@ export const CheckList = defineComponent({
               'check-list-content': true,
               'check-list-nocontent': checkedData.value.length === 0,
               'check-list-disable': disabled,
+              'check-list-flex-start': flexStart,
             })}
             onClick={() => {
               if (!disabled && !show.value) {
@@ -263,20 +262,20 @@ export const CheckList = defineComponent({
           <View class="flex">
             {!disabled && allowClear && !!checkedData.value?.length && (
               <View
-                class="jmc-icon jmc-icon-clear clear-box"
+                class="jmc-nut-icon jmc-nut-icon-clear clear-box"
                 onClick={clear}
               ></View>
             )}
             {showArrowDown && (
               <View
                 onClick={() => (show.value = true)}
-                class="jmc-icon jmc-icon-xiajiantou check-list-arrow"
+                class="jmc-nut-icon jmc-nut-icon-xiajiantou check-list-arrow"
               ></View>
             )}
             {showArrowLeft && (
               <View
                 onClick={() => (show.value = true)}
-                class="jmc-icon jmc-icon-youjiantou check-list-arrow"
+                class="jmc-nut-icon jmc-nut-icon-youjiantou check-list-arrow"
               ></View>
             )}
           </View>
@@ -320,7 +319,7 @@ export const CheckList = defineComponent({
             >
               {loading.value && (
                 <View class="check-list-loading">
-                  <View class="jmc-icon jmc-icon-loading"></View>
+                  <View class="jmc-nut-icon jmc-nut-icon-loading"></View>
                 </View>
               )}
               {!loading.value && innerData.value.length === 0 && (

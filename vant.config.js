@@ -7,5 +7,8 @@ module.exports = {
     skipInstall: ['lazyload'],
     packageManager: 'yarn',
     ignore: [/types.d.ts/],
+    css: {
+      preprocessor: 'sass',
+    },
   },
 }

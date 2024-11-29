@@ -26,3 +26,5 @@ lib
 LICENSE
 
 node_modules
+
+packages/style/*

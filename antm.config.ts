@@ -5,41 +5,29 @@ const CWD = process.cwd()
 
 export default defineConfig({
   docs: {
-    title: 'antd Max',
+    title: 'NutUi',
     buildPort: 7972,
-    src: [join(CWD, './src'), join(CWD, './docs')],
-    globalStyles: [
-      join(process.cwd(), './config/doc.less'),
-      join(process.cwd(), './config/style.less'),
-    ],
-    logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+    src: [join(CWD, './packages'), join(CWD, './docs')],
+    globalStyles: [join(process.cwd(), './config/docs.less')],
+    logo: 'https://atgs-prod.oss-cn-hangzhou.aliyuncs.com/cloud/storage/weapp/nut-logo.png',
     route: {
       level: 1,
     },
-    headerLinks: [
-      {
-        title: 'https://b.yzcdn.cn/vant/logo/github.svg',
-        url: 'https://github.com/AntmJS/@antmjs/vantui-vue/',
-        type: 'img',
-      },
-      {
-        title: '更多',
-        type: 'select',
-        options: [
-          {
-            title: 'antmjs Doc',
-            url: 'https://antmjs.github.io/antm/antm-doc/',
-          },
-          {
-            title: 'antmjs Vantui',
-            url: 'https://antmjs.github.io/vantui',
-          },
-        ],
-      },
-    ],
+    headerLinks: [],
     menu: getMenus(),
     demoCode: {
-      dir: 'example',
+      dir: 'demo',
+    },
+    simulator: {
+      url: {
+        development: 'http://127.0.0.1:8181',
+        production: '/nutui/mobile.html',
+      },
+      transform: (url) => `#/pages/${url}/index`,
+      noMate: {
+        urls: ['introduce'],
+        redirect: '#/pages/checkList/index',
+      },
     },
   },
 })
@@ -56,33 +44,11 @@ function getMenus(): IDocMenuNavs {
       ],
     },
     {
-      name: '通用组件',
+      name: '表单组件',
       items: [
         {
-          path: 'button-async',
-          title: 'button-async 异步按钮',
-        },
-        {
-          path: 'infinite-scroll',
-          title: 'infinite-scroll 无限滚动',
-        },
-      ],
-    },
-    {
-      name: '数据录入',
-      items: [
-        {
-          path: 'form-box',
-          title: 'form-box 表单盒子',
-        },
-      ],
-    },
-    {
-      name: '业务组件',
-      items: [
-        {
-          path: 'sku',
-          title: 'sku 商品选择',
+          path: 'checkList',
+          title: 'checkList 勾选组件',
         },
       ],
     },

@@ -1,0 +1,19 @@
+/* stylelint-disable selector-type-no-unknown */
+@import './iconfont.css';
+
+:root,
+page {
+  --primary-color: #386df8;
+  --primary-color-end: #94adeb;
+  --public-placeholder-color: #c8c9cc;
+  --public-text-color: #333333;
+  --public-text-size: 12px;
+  /** nutui reset */
+  --nut-badge-background-color: #fa2c19;
+  --nut-primary-color: var(--primary-color);
+  --nut-primary-color-end: var(--primary-color-end);
+  --nut-text-color: var(--public-text-color);
+  --nut-font-size-1: var(--public-text-size);
+  --nut-uploader-picture-width: 110px;
+  --nut-uploader-picture-height: 110px;
+}

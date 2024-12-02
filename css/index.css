@@ -290,6 +290,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 /* stylelint-disable selector-max-type */
 /* stylelint-disable no-descending-specificity */
@@ -535,6 +538,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 :root {
   --public-font-family: open sans, -apple-system, blinkmacsystemfont, helvetica neue, helvetica, segoe ui, arial, roboto, pingfang sc, miui, hiragino sans gb, microsoft yahei, sans-serif;
@@ -596,6 +602,9 @@
 .antm-docs-markdown pre code {
   color: #474141ee;
   font-family: fangsong;
+}
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
 }
 
 /* stylelint-disable keyframes-name-pattern */
@@ -825,6 +834,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 /* stylelint-disable selector-max-type */
 :root {
@@ -997,6 +1009,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 :root {
   --public-font-family: open sans, -apple-system, blinkmacsystemfont, helvetica neue, helvetica, segoe ui, arial, roboto, pingfang sc, miui, hiragino sans gb, microsoft yahei, sans-serif;
@@ -1092,6 +1107,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 :root {
   --public-font-family: open sans, -apple-system, blinkmacsystemfont, helvetica neue, helvetica, segoe ui, arial, roboto, pingfang sc, miui, hiragino sans gb, microsoft yahei, sans-serif;
@@ -1165,6 +1183,9 @@
 .antm-docs-markdown pre code {
   color: #474141ee;
   font-family: fangsong;
+}
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
 }
 
 :root {
@@ -1300,6 +1321,9 @@
   color: #474141ee;
   font-family: fangsong;
 }
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
+}
 
 * {
   box-sizing: border-box;
@@ -1349,5 +1373,8 @@ a {
 .antm-docs-markdown pre code {
   color: #474141ee;
   font-family: fangsong;
+}
+.antm-doc-right-navs-stretch .antm-doc-right-navs-show {
+  width: 190px;
 }
 

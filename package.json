@@ -1,10 +1,14 @@
 {
-  "name": "@jmc/nutui",
-  "version": "0.0.1.beta.1",
+  "name": "@jmcteam/nutui-beta.0.1",
+  "version": "0.0.1",
   "typings": "./dts/index.d.ts",
   "main": "lib/index.js",
   "module": "es/index.js",
   "description": "git",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "repository": {
     "type": "https",
     "url": "https://github.com/jmcteam/nutui.git"
@@ -169,5 +173,10 @@
         }
       }
     }
+  },
+  "homepage": "https://github.com/jmcteam/nutui#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
   }
 }

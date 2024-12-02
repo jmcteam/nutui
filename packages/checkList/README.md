@@ -9,7 +9,7 @@
 在 Taro 文件中引入组件
 
 ```js
-import { checkList } from '@jmc/nutui'
+import { checkList } from '@jmcteam/nutui'
 ```
 
 ## 代码演示

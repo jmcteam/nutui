@@ -7,16 +7,19 @@
 .idea
 .rn_temp
 .DS_Store
+.vscode
+config
+.husky
 
 CHANGELOG.md
-
+docs
 node_modules
 coverage
 src
 config
 .husky
 .editorconfig
-build_doc
+doc_build
 .eslintignore
 project.config.json
 project.tt.json
@@ -29,3 +32,4 @@ vant.config.js
 .yarnrc
 yarn.lock
 tsconfig.json
+packages

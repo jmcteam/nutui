@@ -1,7 +1,7 @@
 <div class="card">
   <div class="intro" style="text-align: center; padding: 20px;">
     <img class="intro__logo" style="width: 420px; box-shadow: none;" src="https://atgs-prod.oss-cn-hangzhou.aliyuncs.com/cloud/storage/weapp/nut-logo.png">
-    <h2 style="margin: 0; font-size: 32px; line-height: 60px;">@jmc/nutui</h2>
+    <h2 style="margin: 0; font-size: 32px; line-height: 60px;">@jmcteam/nutui</h2>
     <p>基于taro和nutui开发的vue3组件库</p>
   </div>
 </div>

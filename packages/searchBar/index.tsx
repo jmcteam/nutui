@@ -49,7 +49,7 @@ export const SearchBar = defineComponent({
             >
               {!isEditing.value ? (
                 <View class="search-placeholder">
-                  <Text class="jmc-icon jmc-icon-search search-prefix-icon" />
+                  <Text class="jmc-nut-icon jmc-nut-icon-search search-prefix-icon" />
                   <Text class="search-placeholder-text">{placeholder}</Text>
                 </View>
               ) : (
@@ -64,7 +64,7 @@ export const SearchBar = defineComponent({
                     onConfirm={() => onEnter?.(keyword.value)}
                   />
                   <View
-                    class="jmc-icon jmc-icon-search search-btn"
+                    class="jmc-nut-icon jmc-nut-icon-search search-btn"
                     onClick={() => onSearch?.(keyword.value)}
                   />
                 </View>
@@ -78,7 +78,7 @@ export const SearchBar = defineComponent({
               )}
               {!isEditing.value && !!filters && (
                 <View
-                  class="jmc-icon jmc-icon-filter filter-btn"
+                  class="jmc-nut-icon jmc-nut-icon-filter filter-btn"
                   onClick={() => (filterDrawerShow.value = true)}
                 />
               )}

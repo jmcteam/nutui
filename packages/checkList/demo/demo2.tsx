@@ -4,7 +4,7 @@ import CheckList from '../index'
 
 export default defineComponent({
   setup() {
-    const data = ref()
+    const data = ref([1, 2])
 
     return () => {
       return (

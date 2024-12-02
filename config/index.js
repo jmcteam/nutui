@@ -31,7 +31,7 @@ const config = {
     375: 2 / 1,
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: './doc_build/dist',
   plugins: ['@tarojs/plugin-html'],
   defineConstants: {},
   alias: {
@@ -101,6 +101,10 @@ const config = {
           process: 'process/browser', // 使用 process/browser 模块
         }),
       )
+      // 在线文档结构
+      if (process.env.NODE_ENV === 'production') {
+        chain.output.publicPath('/nutui/dist/')
+      }
     },
     publicPath: '/',
     staticDirectory: 'static',

@@ -42,16 +42,22 @@ export const CheckList = defineComponent({
       }
     }
 
+    const syncValue = () => {
+      if (props.modelValue && Array.isArray(props.modelValue)) {
+        const ddd = props.data?.length ? props.data : innerAllData.value
+        const checkedData_ = ddd.filter((it) =>
+          props.modelValue.includes(it[props.fieldName]),
+        )
+        checkedData.value = checkedData_
+      }
+    }
+
+    syncValue()
+
     watch(
       () => [props.modelValue, props.data],
       () => {
-        if (props.modelValue && Array.isArray(props.modelValue)) {
-          const ddd = props.data?.length ? props.data : innerAllData.value
-          const checkedData_ = ddd.filter((it) =>
-            props.modelValue.includes(it[props.fieldName]),
-          )
-          checkedData.value = checkedData_
-        }
+        syncValue()
       },
     )
 

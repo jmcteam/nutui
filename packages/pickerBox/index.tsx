@@ -165,20 +165,20 @@ export const PickerBox = defineComponent({
           </View>
           {allowClear && curContent.value && (
             <View
-              class="jmc-icon jmc-icon-clear clear-box"
+              class="jmc-nut-icon jmc-nut-icon-clear clear-box"
               onClick={clear}
             ></View>
           )}
           {showArrowDown && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-xiajiantou components-picker-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-xiajiantou components-picker-box-arrow"
             ></View>
           )}
           {showArrowLeft && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-youjiantou components-picker-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-youjiantou components-picker-box-arrow"
             ></View>
           )}
           <Popup

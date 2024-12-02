@@ -31,7 +31,7 @@ export const FixedTopBtn = defineComponent({
           style={{ zIndex, ...offsetStyle }}
           onClick={onClick}
         >
-          <View class="jmc-icon jmc-icon-top top-icon"></View>
+          <View class="jmc-nut-icon jmc-nut-icon-top top-icon"></View>
         </View>
       )
     }

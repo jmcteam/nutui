@@ -1,6 +1,9 @@
+$date-picker-box-font-size: 14px;
+
 .components-date-picker-box {
   display: flex;
   align-items: center;
+  font-size: $date-picker-box-font-size;
 
   .components-picker-box-arrow {
     margin-left: 3px;

@@ -2,7 +2,7 @@ import { join } from 'path'
 import { IDocMenuNavs, defineConfig } from '@antmjs/types'
 
 const CWD = process.cwd()
-
+// https://antmjs.github.io/antm/antm-doc/#/quick
 export default defineConfig({
   docs: {
     title: 'NutUi',
@@ -13,7 +13,6 @@ export default defineConfig({
     route: {
       level: 1,
     },
-    headerLinks: [],
     menu: getMenus(),
     demoCode: {
       dir: 'demo',
@@ -21,14 +20,21 @@ export default defineConfig({
     simulator: {
       url: {
         development: 'http://127.0.0.1:8181',
-        production: '/nutui/mobile.html',
+        production: '/nutui/dist/index.html',
       },
       transform: (url) => `#/pages/${url}/index`,
       noMate: {
-        urls: ['introduce'],
+        urls: ['introduce', 'contributing'],
         redirect: '#/pages/checkList/index',
       },
     },
+    headerLinks: [
+      {
+        title: 'https://b.yzcdn.cn/vant/logo/github.svg',
+        url: 'https://github.com/jmcteam/nutui',
+        type: 'img',
+      },
+    ],
   },
 })
 
@@ -41,6 +47,10 @@ function getMenus(): IDocMenuNavs {
           path: 'introduce',
           title: '介绍',
         },
+        {
+          path: 'contributing',
+          title: '贡献指南',
+        },
       ],
     },
     {
@@ -49,6 +59,10 @@ function getMenus(): IDocMenuNavs {
         {
           path: 'checkList',
           title: 'checkList 勾选组件',
+        },
+        {
+          path: 'datePickerBox',
+          title: 'datePickerBox 日期组件',
         },
       ],
     },

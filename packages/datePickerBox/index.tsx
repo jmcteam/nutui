@@ -13,17 +13,25 @@ export const DatePickerBox = defineComponent({
     const innerValue = ref<Date | null>(null)
     const pickerValue = ref<Date | null>(null)
 
+    const syncValue = () => {
+      if (props.modelValue) {
+        innerValue.value =
+          props.modelValue instanceof Date
+            ? props.modelValue
+            : dayjs(props.modelValue).toDate()
+
+        console.info('modelValue!!!!', props.modelValue)
+      } else {
+        innerValue.value = null
+      }
+    }
+
+    syncValue()
+    // watch方法在微信端初始化执行，h5不会
     watch(
       () => props.modelValue,
       () => {
-        if (props.modelValue) {
-          innerValue.value =
-            props.modelValue instanceof Date
-              ? props.modelValue
-              : dayjs(props.modelValue).toDate()
-        } else {
-          innerValue.value = null
-        }
+        syncValue()
       },
     )
 
@@ -107,20 +115,20 @@ export const DatePickerBox = defineComponent({
           </View>
           {allowClear && curContent.value && (
             <View
-              class="jmc-icon jmc-icon-clear clear-box"
+              class="jmc-nut-icon jmc-nut-icon-clear clear-box"
               onClick={clear}
             ></View>
           )}
           {showArrowDown && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-xiajiantou components-picker-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-xiajiantou components-picker-box-arrow"
             ></View>
           )}
           {showArrowLeft && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-youjiantou components-picker-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-youjiantou components-picker-box-arrow"
             ></View>
           )}
 

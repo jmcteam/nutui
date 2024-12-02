@@ -394,7 +394,7 @@ export const UploadFile = defineComponent({
                         onClick={() => {
                           clearFile(index)
                         }}
-                        class="jmc-icon  jmc-icon-qingchu jmc-clear"
+                        class="jmc-nut-icon  jmc-nut-icon-qingchu jmc-clear"
                       />
                     )}
                     <View class="upload-box">{renderFileShow(item)}</View>
@@ -416,7 +416,7 @@ export const UploadFile = defineComponent({
                 {slots?.['default']?.() || (
                   <View class="upload-box">
                     <View class="plus-sign">
-                      <View class="jmc-icon jmc-icon-plus"></View>
+                      <View class="jmc-nut-icon jmc-nut-icon-plus"></View>
                     </View>
                     <View class="upload-tip">{slots?.['desc']?.()}</View>
                   </View>

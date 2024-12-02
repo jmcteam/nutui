@@ -1,24 +1,26 @@
 {
   "name": "@jmc/nutui",
-  "version": "0.0.1",
-  "types": "./dts/index.d.ts",
+  "version": "0.0.1.beta.1",
+  "typings": "./dts/index.d.ts",
   "main": "lib/index.js",
   "module": "es/index.js",
   "description": "git",
-  "keywords": [
-    "vue",
-    "nut",
-    "taro",
-    "vue3"
-  ],
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/jmcteam/nutui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmcteam/nutui/issues/new"
+  },
   "scripts": {
     "eslint": "npx eslint -c eslint.config.js '**/*.{js,jsx,ts,tsx}' && npx tsc -p tsconfig.json --skipLibCheck",
     "stylelint": "npx stylelint --aei --config stylelint.config.js '**/*.{css,less}'",
     "prettier": "npx prettier --write '**/*.{js,jsx,ts,tsx,md,html,css,less}'",
     "prepare": "husky install",
-    "start": "npx antm-doc-start",
-    "ghpage": "rm -rf doc_build & npx antm-doc-build && npx gh-pages -d doc_build",
-    "build": "antm-vantui-cli build",
+    "start": "yarn watch:h5 & npx antm-doc-start",
+    "docs": "yarn build:h5 & npx antm-doc-build",
+    "ghpage": "npx gh-pages -d doc_build",
+    "build": "antm-vantui-cli build & yarn dts",
     "watch": "npx antm-vantui-cli watch",
     "build:weapp": "taro build --type weapp",
     "build:alipay": "taro build --type alipay",
@@ -30,7 +32,8 @@
     "watch:tt": "npm run build:tt -- --watch",
     "watch:h5": "npm run build:h5 -- --watch",
     "watch:quickapp": "npm run build:quickapp -- --watch",
-    "dts": "rm -rd ./dts && tsc -p dts.config.json"
+    "dts": "rm -rd ./dts && tsc -p dts.config.json",
+    "release": "npx release"
   },
   "author": "",
   "license": "MIT",
@@ -59,6 +62,7 @@
     "@vue/babel-plugin-jsx": "^1.2.5",
     "@vue/cli-plugin-babel": "^5.0.8",
     "dayjs": "^1.11.13",
+    "release-it": "16.1.5",
     "style-resources-loader": "^1.5.0",
     "swc-loader": "^0.2.6",
     "vue": "^3.0.0"
@@ -98,9 +102,25 @@
     "vue-loader": "^17.0.0",
     "webpack": "5.69.0"
   },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8.15",
+    "yarn": ">=1.2"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ],
+    "keywords": [
+      "vue",
+      "nut",
+      "taro",
+      "vue3"
     ],
     "rules": {
       "type-enum": [

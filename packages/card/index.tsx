@@ -92,7 +92,7 @@ export const Card = defineComponent({
                     }}
                   >
                     {isExpanded.value ? '收起' : '展开'}
-                    <Text class="jmc-icon jmc-icon-xiajiantou card-collapse-icon" />
+                    <Text class="jmc-nut-icon jmc-nut-icon-xiajiantou card-collapse-icon" />
                   </View>
                 </View>
               )}

@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ['pages/checkList/index'],
+  pages: ['pages/checkList/index', 'pages/datePickerBox/index'],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

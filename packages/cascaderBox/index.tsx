@@ -87,20 +87,20 @@ export const CascaderBox = defineComponent({
           </View>
           {allowClear && curContent.value && (
             <View
-              class="jmc-icon jmc-icon-clear clear-box"
+              class="jmc-nut-icon jmc-nut-icon-clear clear-box"
               onClick={clear}
             ></View>
           )}
           {showArrowDown && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-xiajiantou components-cascader-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-xiajiantou components-cascader-box-arrow"
             ></View>
           )}
           {showArrowLeft && (
             <View
               onClick={() => (show.value = true)}
-              class="jmc-icon jmc-icon-youjiantou components-cascader-box-arrow"
+              class="jmc-nut-icon jmc-nut-icon-youjiantou components-cascader-box-arrow"
             ></View>
           )}
           <Cascader

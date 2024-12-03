@@ -8,7 +8,7 @@
 
 ### 相关链接
 
-- [Nutui](https://nutui.jd.com/h5/vue/4x/#/zh-CN/guide/introp)：由有京东官方打造的 NutUI-Vue 组件库
+- [Nutui](https://nutui.jd.com/h5/vue/4x/#/zh-CN/guide/introp)：由京东官方打造的 NutUI-Vue 组件库
 - [Taro](https://github.com/NervJS/taro)：由京东团队打造的开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5/React Native 等应用
 - [@vue/babel-plugin-jsx](https://github.com/vuejs/babel-plugin-jsx/tree/main/packages/babel-plugin-jsx#readme): 以 JSX 的方式来编写 Vue 代码
 

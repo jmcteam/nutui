@@ -25,17 +25,20 @@
 - `packages/demo/index`在 demo 代码`src`下面创建 xx 文件引用，并设置`app.config.js`的路由
 - `antmjs.config.ts`下面设置文档菜单
 
-注意事项
+> 注意事项 `vue的watch`方法在 h5 端初始化的时候不会执行
 
-1. `watch`方法在 h5 端初始化的时候不会执行
+### TODO
+
+1. 组件更新和文档同步
+2. 组件关键样式变量用 css 变量
+3. 组件 class 用`nutui-`前缀
 
 ### 在线文档构建
 
-1. `yarn docs`
-2. `yarn ghpage`
+1. `yarn docs`: 输出`Entrypoints:app (xxx KiB)`后手动结束进程
+2. `npx gh-pages -d doc_build`: 同步到文档服务分支
 
 ### 版本发布
 
-`yarn build` && `yarn release`
-
-暂时采用`beta`的 tag 发布
+1. `yarn build`: 忽略`DTS`的报错
+2. `npm publish --tag beta`: 暂时手动发布，无日志

@@ -17,6 +17,14 @@ $date-picker-box-font-size: 14px;
 
   .picker-box-content {
     color: var(--public-text-color);
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .picker-box-flex-start {
+    justify-content: flex-start;
+    flex: unset;
   }
 
   .picker-box-content-placeholder {

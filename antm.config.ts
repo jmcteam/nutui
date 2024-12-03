@@ -34,6 +34,16 @@ export default defineConfig({
         url: 'https://github.com/jmcteam/nutui',
         type: 'img',
       },
+      {
+        title: '更多',
+        type: 'select',
+        options: [
+          {
+            title: 'taro-vue3-jsx-template',
+            url: 'https://github.com/jmcteam/taro-vue-jsx-template',
+          },
+        ],
+      },
     ],
   },
 })
@@ -46,6 +56,10 @@ function getMenus(): IDocMenuNavs {
         {
           path: 'introduce',
           title: '介绍',
+        },
+        {
+          path: 'quick',
+          title: '快速开始',
         },
         {
           path: 'contributing',

@@ -20,6 +20,14 @@ import { checkList } from '@jmcteam/nutui'
 
 ::: $demo1 :::
 
+### 年月选择
+
+::: $demo2 :::
+
+### 时分选择
+
+::: $demo3 :::
+
 ### Props
 
 | 参数               | 说明                                                                                                                                 | 类型                                                   | 默认值   |

@@ -25,6 +25,10 @@ export const CheckListProps = {
    * 虚拟列表开启
    */
   virtualList: Boolean,
+  searchPlaceholder: {
+    default: '请搜索',
+    type: String,
+  },
   /**
    * @description 搜索输入时是否开启异步请求搜索
    */
@@ -52,11 +56,6 @@ export const CheckListProps = {
   placeholderColor: {
     type: String,
     default: '选择提示的颜色',
-    required: false,
-  },
-  searchPlaceholder: {
-    type: String,
-    default: '请输入',
     required: false,
   },
   data: {
@@ -100,11 +99,6 @@ export const CheckListProps = {
     default: 'id',
     required: false,
   },
-  bodyHeight: {
-    type: String,
-    default: '40vh',
-    required: false,
-  },
   showArrowDown: {
     type: Boolean,
     default: false,
@@ -136,7 +130,7 @@ export const CheckListProps = {
     required: false,
   },
   checkType: {
-    type: String,
+    type: String as PropType<'checkbox' | 'check'>,
     default: 'checkbox',
   },
   mode: {

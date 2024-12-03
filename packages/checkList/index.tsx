@@ -52,7 +52,7 @@ export const CheckList = defineComponent({
       }
     }
 
-    syncValue()
+    if (process.env.TARO_ENV === 'h5') syncValue()
 
     watch(
       () => [props.modelValue, props.data],
@@ -197,12 +197,11 @@ export const CheckList = defineComponent({
           >
             {it[optionsLabelName || labelName] || '-'}
           </View>
-          {checkType !== 'checkbox' &&
-            checked.value.includes(it[fieldName]) && (
-              <View class="check-icon">
-                <View class={`check-label-icon `}></View>
-              </View>
-            )}
+          {checkType === 'check' && checked.value.includes(it[fieldName]) && (
+            <View class="check-icon">
+              <View class={`check-label-icon `}></View>
+            </View>
+          )}
           {checkType === 'checkbox' && (
             <View class="check-icon">
               <Checkbox

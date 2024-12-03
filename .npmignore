@@ -33,3 +33,9 @@ vant.config.js
 yarn.lock
 tsconfig.json
 packages
+antmjs.config.ts
+.eslintrc.js
+dts.config.json
+stylelint.config.js
+types
+babel.config.js

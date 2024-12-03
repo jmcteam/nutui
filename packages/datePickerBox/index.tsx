@@ -19,14 +19,12 @@ export const DatePickerBox = defineComponent({
           props.modelValue instanceof Date
             ? props.modelValue
             : dayjs(props.modelValue).toDate()
-
-        console.info('modelValue!!!!', props.modelValue)
       } else {
         innerValue.value = null
       }
     }
 
-    syncValue()
+    if (process.env.TARO_ENV === 'h5') syncValue()
     // watch方法在微信端初始化执行，h5不会
     watch(
       () => props.modelValue,
@@ -100,6 +98,7 @@ export const DatePickerBox = defineComponent({
         type,
         filter,
         isShowChinese,
+        flexStart,
       } = props
 
       return (
@@ -108,6 +107,7 @@ export const DatePickerBox = defineComponent({
             class={classNames({
               'picker-box-content': true,
               'picker-box-content-placeholder': curContent.value === '',
+              'picker-box-flex-start': flexStart,
             })}
             onClick={() => (show.value = true)}
           >

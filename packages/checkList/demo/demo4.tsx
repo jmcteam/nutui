@@ -4,13 +4,14 @@ import CheckList from '../index'
 
 export default defineComponent({
   setup() {
-    const data = ref([])
+    const data = ref(4)
 
     return () => {
       return (
         <CheckList
+          checkType="check"
           data={options}
-          modelValue={data.value}
+          modelValue={[data.value]}
           placeholder="请选择"
           showArrowLeft
         ></CheckList>

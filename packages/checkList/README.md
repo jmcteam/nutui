@@ -24,7 +24,11 @@ import { checkList } from '@jmcteam/nutui'
 
 ### 异步请求
 
+> 支持 response 格式 { result: [xxx] }
+
 传入异步请求直接远程获取数据
+
+### 勾选样式
 
 ::: $demo3 :::
 
@@ -51,5 +55,6 @@ import { checkList } from '@jmcteam/nutui'
 | searchShow        | 展示搜索框                               | boolean                | `true`     |
 | allowClear        | 展示下箭头                               | boolean                | `true`     |
 | searchData        | 远程搜索初始化数据                       | function               | `-`        |
-| checkType         | 勾选狂类型                               | 'single' 或 'multiple' | `single`   |
+| mode              | 勾选狂类型                               | 'single' 或 'multiple' | `single`   |
+| checkType         | 勾选狂类型                               | 'checkbox' 或 'check'  | `checkbox` |
 | disabled          | 是否禁用                                 | boolean                | `false`    |

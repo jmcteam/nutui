@@ -7,6 +7,7 @@ export const options = [
 
 export const asyncOptions = () => {
   return new Promise((resolve) => {
+    // 支持response格式 { result: [xxx] }
     setTimeout(() => {
       resolve([
         { id: 1, name: '异步数据1' },

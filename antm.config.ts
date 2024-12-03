@@ -1,5 +1,6 @@
 import { join } from 'path'
 import { IDocMenuNavs, defineConfig } from '@antmjs/types'
+import pkg from './package.json'
 
 const CWD = process.cwd()
 // https://antmjs.github.io/antm/antm-doc/#/quick
@@ -24,7 +25,7 @@ export default defineConfig({
       },
       transform: (url) => `#/pages/${url}/index`,
       noMate: {
-        urls: ['introduce', 'contributing'],
+        urls: ['introduce', 'contributing', 'quick'],
         redirect: '#/pages/checkList/index',
       },
     },
@@ -33,6 +34,10 @@ export default defineConfig({
         title: 'https://b.yzcdn.cn/vant/logo/github.svg',
         url: 'https://github.com/jmcteam/nutui',
         type: 'img',
+      },
+      {
+        title: `v${pkg?.version}`,
+        type: 'text',
       },
       {
         title: '更多',

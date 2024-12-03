@@ -23,7 +23,6 @@
     "prepare": "husky install",
     "start": "yarn watch:h5 & npx antm-doc-start",
     "docs": "yarn build:h5 & npx antm-doc-build",
-    "ghpage": "npx gh-pages -d doc_build",
     "build": "antm-vantui-cli build & yarn dts",
     "watch": "npx antm-vantui-cli watch",
     "build:weapp": "taro build --type weapp",
